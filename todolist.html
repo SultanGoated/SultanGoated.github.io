@@ -1,27 +1,105 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="dark" lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="./favicon.png" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
-		<link rel="modulepreload" href="./_app/immutable/start-b5ea2a4a.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-07515072.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-0e5be8dd.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-00a722dd.js">
+		<link href="./_app/immutable/assets/_layout-15d976af.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_page-5382f3aa.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-29901828.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-5f03e55c.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-480957e6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper-41c905a7.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/control-f5b05b5f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/parse-d12b0d5b.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-7b3f1a70.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/todolist/_page.svelte-a5af52c3.js">
 	</head>
 	<body>
 		<div style="display: contents">
-		<script type="module" data-sveltekit-hydrate="45h">
-			import { start } from "./_app/immutable/start-b5ea2a4a.js";
+
+
+<div class="main svelte-1qz2ah7"><div class="navbar bg-base-100"><div class="navbar-start"><div class="dropdown">
+        
+        <label tabindex="0" class="btn btn-ghost btn-circle"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg></label>
+        
+        <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"><li><a href="/">Home page</a></li>
+          <li><a href="/clicker">Sponge Clicker</a></li>
+          <li><a href="/todolist">ToDoList</a></li>
+          <li><a href="/telltale">Telltale</a></li>
+          <li><a href="/memory">Memory</a></li>
+          <li><a href="/ElizaChatBot">Eliza Chat Bot</a></li>
+          <li><a href="/search">Search</a></li>
+          <li><a href="/blog">Blog</a></li>
+
+          <li><a target="_blank" href="https://github.com/SultanGoated/SultanGoated.github.io">GitHub</a></li></ul></div></div>
+    <div class="navbar-center"><a class="btn btn-ghost normal-case text-xl" href="/">Home Page</a></div>
+    <div class="navbar-end"><button class="btn btn-ghost btn-circle"><a href="/search"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></a></button>
+      <button class="btn btn-ghost btn-circle"><div class="indicator"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+          <span class="badge badge-xs badge-primary indicator-item"></span></div></button></div></div>
+
+  
+
+
+  
+
+
+
+
+
+<title>To Do List
+</title>
+<main class="svelte-bi25eh"><body class="svelte-bi25eh"><div class="svelte-bi25eh"><h1 class="font svelte-bi25eh">To Do List
+            </h1>
+            <fieldset class="font svelte-bi25eh"><label for="to-do" id="to-do"><input class="font svelte-bi25eh" type="text" placeholder="To Do" value="">
+
+                    <button class="font svelte-bi25eh">add
+                    </button></label></fieldset>
+            <fieldset class="font svelte-bi25eh">To Do Tasks
+                </fieldset>
+            <fieldset class="font svelte-bi25eh">Done Tasks
+                </fieldset></div>
+        <fieldset class="support svelte-bi25eh"><a class="font svelte-bi25eh" href="https://www.paypal.com/paypalme/goatconnective">Donation</a>
+            <h3>Contact via email: <p>sultanhaidari8520@gmail.com</p></h3></fieldset></body></main>
+
+
+
+
+
+
+
+</div>
+
+
+		<script type="module" data-sveltekit-hydrate="1fdh7cm">
+			import { start } from "./_app/immutable/start-29901828.js";
 
 			start({
 				env: {},
-				hydrate: null,
 				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="45h"]').parentNode,
-				version: "1669621755445"
+				target: document.querySelector('[data-sveltekit-hydrate="1fdh7cm"]').parentNode,
+				version: "1681714162263",
+				hydrate: {
+					node_ids: [0, 14],
+					data: [null,null],
+					form: null
+				}
 			});
-		</script></div>
+		</script>
+	</div>
 	</body>
+	<style>
+		body{
+			margin: 0;
+		}
+
+		main{
+			padding-top: 64px;
+		}
+		
+	</style>
 </html>

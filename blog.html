@@ -7,6 +7,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
 		<link href="./_app/immutable/assets/_layout-15d976af.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_layout-5c045b07.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_page-1bfa6c14.css" rel="stylesheet">
 		<link rel="modulepreload" href="./_app/immutable/start-29901828.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index-5f03e55c.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-480957e6.js">
@@ -16,7 +18,14 @@
 		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-7b3f1a70.js">
 		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-f92dd7bf.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/blog/_layout.svelte-1c501a6b.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/blog/_page.svelte-b8ffca41.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/blog/_page.js-4b271f59.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_page-80848ead.js"><!-- HEAD_svelte-1lc4dl3_START --><link rel="stylesheet" href="/pico.min.css"><style>nav {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  </style><!-- HEAD_svelte-1lc4dl3_END -->
 	</head>
 	<body>
 		<div style="display: contents">
@@ -42,25 +51,38 @@
           <span class="badge badge-xs badge-primary indicator-item"></span></div></button></div></div>
 
   
+
+<main class="container"><h1>Blog</h1>
+
+<main class="svelte-1f3vgx7"><article class="svelte-1f3vgx7"><ul class="list svelte-1f3vgx7"><li><h2 class="svelte-1f3vgx7"><a href="/blog/aboutMe">About Me
+            </a></h2>
+          
+        </li><li><h2 class="svelte-1f3vgx7"><a href="/blog/projectDocumentation">My Website's Documentation
+            </a></h2>
+          
+        </li></ul></article>
+  <p>Published: 2023-04-03
+  </p>
+</main></main>
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="xi1bki">
+		<script type="module" data-sveltekit-hydrate="1a78fa1">
 			import { start } from "./_app/immutable/start-29901828.js";
 
 			start({
 				env: {},
 				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="xi1bki"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="1a78fa1"]').parentNode,
 				version: "1681714162263",
 				hydrate: {
-					node_ids: [0, 5],
-					data: [null,null],
+					node_ids: [0, 2, 7],
+					data: [null,null,null],
 					form: null
 				}
 			});
 		</script>
-	</div>
+	<script type="application/json" data-sveltekit-fetched data-url="/api/posts">{"status":200,"statusText":"","headers":{},"body":"[{\"meta\":{\"title\":\"About Me\",\"date\":\"2023-04-03\"},\"path\":\"aboutMe\"},{\"meta\":{\"title\":\"My Website's Documentation\",\"date\":\"2023-04-05\"},\"path\":\"projectDocumentation\"}]"}</script></div>
 	</body>
 	<style>
 		body{
