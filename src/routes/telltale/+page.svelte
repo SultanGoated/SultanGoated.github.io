@@ -1,104 +1,111 @@
 <script>
-  import { story_id_store } from "$lib/stores";
-  import { stories } from "$lib/stories";
+  /** Storing pictures **/
+  let images = [
+  ["https://cdn.discordapp.com/attachments/989739627244048384/1070707884624711750/Alex_Gay_once_upon_a_time_91cd59a4-0832-48ad-9d47-d90de1b54e69.png","once upon a time"],
+  ["https://cdn.discordapp.com/attachments/989739627244048384/1070705925939286026/Alex_Gay_A_prince_sent_to_a_journey_434ae35c-f701-44ec-accb-618b757537c7.png", "2"],
+  ["https://cdn.discordapp.com/attachments/989739627244048384/1070710538235039855/Alex_Gay_The_prince_encountered_many_challenges_along_the_way._2cf06c4f-3ec4-425e-be9d-089020e21f5b.png","3"],
+  ["https://cdn.discordapp.com/attachments/989739627244048384/1070708976339128360/Alex_Gay_in_the_end_The_prince_emerged_victorious_and_saved_the_1c68e497-9d14-468d-9764-7578451d36c2.png","4"],
+  ["https://cdn.discordapp.com/attachments/1008571074981658694/1070712754786279444/SultanTheGoat_The_story_of_the_king_with_many_victorious_and_sa_0680514b-1909-426a-91b8-01a8197d863c.png","5"],
+  ["https://cdn.discordapp.com/attachments/966491148640211034/1070724785769820320/Alex_Gay_the_story_of_the_king_with_many_victories_and_saving_h_cd7861ca-a59c-40e4-b8fb-1bbc5a50d7fe.png", "The end of the story"]
+]
 
-  /* https://svelte.dev/tutorial/in-and-out */
-  import { fly } from "svelte/transition";
+/** Storing chapters**/
 
-  /* https://svelte.dev/tutorial/reactive-statements */
-  $: story_id = $story_id_store;
-  $: story = stories.find((story) => story.id == story_id);
+let chapters = [
+  "Once upon a time...",
+  "there was a kingdom in peril.",
+  "the prince set out on a journey to save it.",
+  "he encountered many challenges along the way.",
+  "in the end, he emerged victorious and saved the kingdom.",
+  "The End"
+];
 
+/** Controlling which chapter we are on **/
 
+let currentChapter = 0;
+
+function nextChapter() {
+  if (currentChapter === chapters.length - 1) {
+    document.getElementById("Changing").style.display = "none";
+  } else {
+    currentChapter++;
+    document.querySelector("#story").innerHTML = chapters[currentChapter];
+  }
+}
+function resetChapter(){
+    currentChapter = 0;
+    document.querySelector("#story").innerHTML = "Once upon a time";
+    document.getElementById("Changing").style.display = "block";
+}
 </script>
 
+  
 
 
+<!-- Some easy HTML -->
 
 <main>
-  <div class="grid">
-    <!-- https://svelte.dev/tutorial/key-blocks -->
-    {#key story_id}
-      <!-- https://svelte.dev/tutorial/in-and-out -->
-      <div
-        class="container"
-        in:fly|local={{ x: 800, duration: 750 }}
-        out:fly|local={{ x: -800, duration: 750 }}
-      >
-        <!-- https://svelte.dev/tutorial/if-blocks -->
-        {#if story}
-          {#if story.img}
-            <img src={story.img} alt={story.message} />
-          {/if}
-          {#if story.html}
-            <!-- https://svelte.dev/tutorial/html-tags -->
-            {@html story.html}
-          {/if}
-          <p>{story.message}</p>
-          <div class="row">
-            <!-- https://svelte.dev/tutorial/each-blocks -->
-            {#each story.choices as choice}
-              <button
-                on:click={() => {
-                  $story_id_store = choice.id;
-                }}>{choice.text}</button
-              >
-            {/each}
-          </div>
-          <!-- https://svelte.dev/tutorial/else-blocks -->
-        {:else}
-          <p>STORY FOR ID {story_id} MISSING</p>
-        {/if}
-      </div>
-    {/key}
+  <header>Welcome to Telltale</header>
+  <p class="adventure" id="story">{currentChapter}</p>
+  <img id="picture" src={images[currentChapter][0]} alt={images[currentChapter][1]}>
+  <div>
+    <div>
+      <button class="button" id="Changing" on:click={nextChapter}>Next Chapter</button>
+    </div>
+    <div>
+      <button class="button" on:click={resetChapter}>Reset</button>
+    </div>
   </div>
 </main>
 
+<!-- Styling website -->
+
 <style>
-  .grid {
-    margin: 10%;
-    display: grid;
-    align-items: center;
-    place-items: center;
-    justify-content: center;
-  }
+header{
+  font-style:oblique;
+  font-weight: bolder;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
 
-  /* force the container to stay in the same position of the grid */
-  /* we need this to ensure that the container div does not move weirdly
-     when two divs coexist which they do while the out and in transition
-     is playing simultaneously. Try removing the grid-column placement stuff
-     and you might notice some weird behaviour.
-  */
-  .container {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    height: 400px;
-    width: 500px;
-  }
+.adventure{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .row {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-  }
+div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  img {
-    width: 400px;
-    height: 300px;
-    object-fit: cover;
-  }
+main{
+  border-style: dotted;
+  border-color: bisque;
+}
 
-  main {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 800px;
+  max-width: 800px;
+  height: 60vh;
 
-  .edith{
-    color: aquamarine;
+}
+@media only screen and (max-width: 767px){
+    main{
+      background-size: contain;
+    }
+}
 
-  }
-
+.button{
+    width: 100px;
+    height:auto;
+    display:inline-block;
+  background-color: blue;
+}
 
 </style>

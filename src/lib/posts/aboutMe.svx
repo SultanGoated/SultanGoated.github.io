@@ -1,0 +1,19 @@
+---
+title: About Me
+date: "2023-04-03"
+---
+
+Hi there, I'm ***Sultan Ali Haidari***, a *Computer Science* student who is passionate about exploring the world of programming. Welcome to my blog!
+
+As a student and beginner in programming, I'm on a journey of continuous learning and growth. Through this blog, I hope to share my experiences, insights,
+and challenges with fellow beginners and aspiring programmers, and to inspire them to pursue their goals with confidence.
+
+In addition to programming, I enjoy listening to music almost 24/7, training at the gym and also playing Pubg Mobile as an unknown top ranker,
+which I believe help me to stay motivated, creative, and balanced. Beyond programming, I have a passion for video editing, social media, gaming,
+and visual effects. Whether it's editing gameplay footage or exploring new visual effects techniques, I find these hobbies to be a great way to express my creativity and explore new possibilities.
+I'm always looking for ways to enrich my life and my work.
+
+Thank you for stopping by, and I hope that my blog will provide you with useful information, inspiration, and entertainment as you navigate your own path in the world of programming.
+Let's learn and grow together!
+
+**Updated:** 2023-04-03

@@ -26,6 +26,8 @@
 
 </script>
 
+  
+
 
 <!--
     HTML
@@ -95,7 +97,7 @@ main{
     margin:auto;
     text-align: center;
     background-color: gray;
-    height: 780px;
+    height: 100vh;
     overflow: auto;
 }
 
@@ -130,6 +132,7 @@ div{
     text-align: center;
     background-color: burlywood;
     border-color: rgb(0, 179, 255);
+    margin-top: 64px;
 }
 
 fieldset{
@@ -137,9 +140,7 @@ fieldset{
     border-style:initial;
 }
 
-a{
-    color:bisque;
-}
+
 
 .support{
     color: rgb(60, 5, 5);
