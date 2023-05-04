@@ -19,16 +19,7 @@
     }
   </script>
   
-  
-  <svelte:head>
-    <link rel="stylesheet" href="/pico.min.css" />
-    <style>
-      nav {
-        margin-left: 0;
-        margin-right: 0;
-      }
-    </style>
-  </svelte:head>
+
   
   <main>
     <div class="container">
@@ -69,5 +60,8 @@
   
 
   <style>
-    
+    .scrollable{
+      max-height: 70vh;
+      overflow-y: scroll;
+    }
   </style>

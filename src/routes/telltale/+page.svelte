@@ -49,11 +49,11 @@ function resetChapter(){
   <p class="adventure" id="story">{currentChapter}</p>
   <img id="picture" src={images[currentChapter][0]} alt={images[currentChapter][1]}>
   <div>
-    <div>
-      <button class="button" id="Changing" on:click={nextChapter}>Next Chapter</button>
+    <div class="button">
+      <button id="Changing" on:click={nextChapter}>Next Chapter</button>
     </div>
-    <div>
-      <button class="button" on:click={resetChapter}>Reset</button>
+    <div class="button">
+      <button on:click={resetChapter}>Reset</button>
     </div>
   </div>
 </main>
@@ -79,11 +79,14 @@ div{
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 50px;
 }
 
 main{
+  height: 93vh;
   border-style: dotted;
-  border-color: bisque;
+  border-color: blue;
+
 }
 
 img{
@@ -95,17 +98,20 @@ img{
   height: 60vh;
 
 }
+
+.button{
+  margin-top: 50px;
+  justify-content: space-around;
+  width: 250px;
+  height:auto;
+  display:inline-block;
+}
+
 @media only screen and (max-width: 767px){
     main{
       background-size: contain;
     }
 }
 
-.button{
-    width: 100px;
-    height:auto;
-    display:inline-block;
-  background-color: blue;
-}
 
 </style>

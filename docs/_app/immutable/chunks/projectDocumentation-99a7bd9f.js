@@ -1,1 +1,0 @@
-import{S as e,i as s,s as a}from"./index-08c6f268.js";const i={title:"My Website's Documentation",date:"2023-04-05"};class l extends e{constructor(t){super(),s(this,t,null,null,a,{})}}export{l as default,i as metadata};

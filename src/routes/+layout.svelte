@@ -1,80 +1,250 @@
 <script>
-  import '../app.css'
+  let active = false;
+  let HomeStyle = "", BlogStyle = "", TellTaleStyle = "", ToDoListStyle = "", SearchStyle = "", MemoryStyle = "", ElizaChatBotStyle = "", ClickerStyle = "", ApiStyle = "";
+  function onHomeClick() {
+    HomeStyle = "forceHover";
+    BlogStyle = "";
+    TellTaleStyle = "";
+    ToDoListStyle = "";
+    SearchStyle = "";
+    MemoryStyle = "";
+    ElizaChatBotStyle = "";
+    ClickerStyle = "";
+    ApiStyle = "";
+  }
+  function onBlogClick() {
+    HomeStyle = "";
+    BlogStyle = "forceHover";
+    TellTaleStyle = "";
+    ToDoListStyle = "";
+    SearchStyle = "";
+    MemoryStyle = "";
+    ElizaChatBotStyle = "";
+    ClickerStyle = "";
+    ApiStyle = "";
+  }
+  function onToDoListClick() {
+    HomeStyle = "";
+    BlogStyle = "";
+    TellTaleStyle = "";
+    ToDoListStyle = "forceHover";
+    SearchStyle = "";
+    MemoryStyle = "";
+    ElizaChatBotStyle = "";
+    ClickerStyle = "";
+    ApiStyle = "";
+  }
+  function onTellTaleClick() {
+    HomeStyle = "";
+    BlogStyle = "";
+    TellTaleStyle = "forceHover";
+    ToDoListStyle = "";
+    SearchStyle = "";
+    MemoryStyle = "";
+    ElizaChatBotStyle = "";
+    ClickerStyle = "";
+    ApiStyle = "";
+  }
+  function onSearchClick() {
+    HomeStyle = "";
+    BlogStyle = "";
+    TellTaleStyle = "";
+    ToDoListStyle = "";
+    SearchStyle = "forceHover";
+    MemoryStyle = "";
+    ElizaChatBotStyle = "";
+    ClickerStyle = "";
+    ApiStyle = "";
+  }
+  function onClickerClick() {
+    HomeStyle = "";
+    BlogStyle = "";
+    TellTaleStyle = "";
+    ToDoListStyle = "";
+    SearchStyle = "";
+    MemoryStyle = "";
+    ElizaChatBotStyle = "";
+    ClickerStyle = "forceHover";
+    ApiStyle = "";
+  }
+  function onMemoryClick() {
+    HomeStyle = "";
+    BlogStyle = "";
+    TellTaleStyle = "";
+    ToDoListStyle = "";
+    SearchStyle = "";
+    MemoryStyle = "forceHover";
+    ElizaChatBotStyle = "";
+    ClickerStyle = "";
+    ApiStyle = "";
+  }
+  function onElizaChatBotClick() {
+    HomeStyle = "";
+    BlogStyle = "";
+    TellTaleStyle = "";
+    ToDoListStyle = "";
+    SearchStyle = "";
+    MemoryStyle = "";
+    ElizaChatBotStyle = "forceHover";
+    ClickerStyle = "";
+    ApiStyle = "";
+  }
 </script>
 
-<div class="main">
+<nav>
+  <div class="container">
+    <h1>Home</h1>
+    <div class="menu">
+      <a href="/" class={HomeStyle} on:click={onHomeClick}>Home</a>
+      <a href="/blog" class={BlogStyle} on:click={onBlogClick}>Blog</a>
+      <a href="/telltale" class={TellTaleStyle} on:click={onTellTaleClick}>TellTale</a>
+      <a href="/ElizaChatBot" class={ElizaChatBotStyle} on:click={onElizaChatBotClick}>Eliza Chat Bot</a>
+      <a href="/search" class={SearchStyle} on:click={onSearchClick}>Search</a>
+      <a href="/clicker" class={ClickerStyle} on:click={onClickerClick}>Clicker</a>
+      <a href="/memory" class={MemoryStyle} on:click={onMemoryClick}>Memory</a>
+      <a href="/todolist" class={ToDoListStyle} on:click={onToDoListClick}>To Do List</a>
+    </div>
 
-  <div class="navbar bg-base-100">
-    <div class="navbar-start">
-      <div class="dropdown">
-        <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-        <!-- svelte-ignore a11y-label-has-associated-control -->
-        <label tabindex="0" class="btn btn-ghost btn-circle">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
-        </label>
-        <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-        <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-          <li><a href="/">Home page</a></li>
-          <li><a href="/clicker">Sponge Clicker</a></li>
-          <li><a href="/todolist">ToDoList</a></li>
-          <li><a href="/telltale">Telltale</a></li>
-          <li><a href="/memory">Memory</a></li>
-          <li><a href="/ElizaChatBot">Eliza Chat Bot</a></li>
-          <li><a href="/search">Search</a></li>
-          <li><a href="/blog">Blog</a></li>
+    <button class="hamburger" class:active={active} on:click={() => {active = !active;}}>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
 
-          <li>
-            <a
-            target="_blank"
-            href="https://github.com/SultanGoated/SultanGoated.github.io"
-            >GitHub</a
-          >
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="navbar-center">
-      <a class="btn btn-ghost normal-case text-xl" href="/">Home Page</a>
-    </div>
-    <div class="navbar-end">
-      <button class="btn btn-ghost btn-circle">
-        <a href="/search">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-        </a>
-      </button>
-      <button class="btn btn-ghost btn-circle">
-        <div class="indicator">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
-          <span class="badge badge-xs badge-primary indicator-item"></span>
-        </div>
-      </button>
-    </div>
-  </div>
-<!--
-  <div class="nav">
-    <nav>
-      <a href="/">Hem</a>
-      <a href="/clicker">Sponge Clicker</a>
-      <a href="/todolist">ToDoList</a>
-      <a href="/telltale">Telltale</a>
-      <a href="/memory">Memory</a>
-      <a
-        target="_blank"
-        href="https://github.com/SultanGoated/SultanGoated.github.io"
-        >GitHub</a
-      >
-    </nav>
-    
-  </div>
-  
-  -->
+<hr />
+<div class="scrollable">
   <slot />
 </div>
 
 <style>
-
-  .main {
-    height:100vh;
+  :root {
+    --primary: #8c38ff;
+    --light: #EEEEEE;
+    --dark: #212121;
   }
 
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira sans", sans-serif;
+  }
+
+  .scrollable{
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: var(--dark);
+    padding: 16px 32px;
+    border-bottom: 3px solid var(--primary);
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: var(--light);
+    border-radius: 6px;
+    z-index: 1;
+    transform-origin: 0 0;
+    transition: 0.4s;
+  }
+
+  .hamburger:hover span:nth-child(2){
+    transform: translateX(10px);
+    background-color: var(--primary);
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: translate(0px, -2px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translate(-3px, 3px) rotate(-45deg);
+  }
+
+  .hamburger.active:hover span{
+    background-color: var(--primary);
+  }
+
+  .menu {
+    display: none;
+    flex: 1 1 0%;
+    justify-content: flex-end;
+    margin: 0 -16px;
+  }
+
+  .menu a {
+    color: #FFF;
+    margin: 0 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.4s;
+    padding: 8px 16px;
+    border-radius: 99px;
+  }
+
+  .menu a.active, .menu a:hover {
+    background-color: var(--primary);
+  }
+  .forceHover {
+    background-color: var(--primary) !important;
+  }
+
+  /* Update media query */
+  @media (min-width: 1136px) {
+    .hamburger{
+      display: none;
+    }
+
+    .menu{
+      display: flex;
+      /* Change justify-content to flex-end */
+      justify-content: flex-end;
+    }
+  }
 </style>

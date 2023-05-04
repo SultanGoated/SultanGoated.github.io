@@ -67,7 +67,7 @@ p{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 100vh;
     background-image: url(https://assets.teenvogue.com/photos/5ee62d2e4608f0989818a8a5/16:9/w_2560%2Cc_limit/MSDSPSQ_EC009.jpg);
     background-size: cover;
 }

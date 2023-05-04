@@ -1,4 +1,39 @@
 ---
 title: My Website's Documentation
-date: "2023-04-05"
+date: "2023-04-20"
 ---
+
+**Hello viewers!**
+
+I am working on a school project from today the 20th April 2023. Although I have not been thinking about what the project is going to be about but I
+ will still be documenting everything about the website that I will be working on in the next few weeks here.
+
+It has now gone 10 minutes and I am thinking to make a game stats website.
+
+It has now been 30 minutes since the last update and I am dealing with some problems that are currently eating my brain!
+
+20 minutes later I have managed to solve the problems.
+
+I have only updated my blog page for today and I have still not been thinking about what kind of website I will be making.
+I will continue working on my blog website until a cool website idea comes to my mind so therefore I will be ending todays documentation here.
+
+//Sultan
+
+**Updated**: 2023-04-20
+
+**Hi again!**
+
+It has been over a week now and honestly I have not been working on the project that we are suppossed to work, all I have was that I deleted an extra CSS framework "Pico.CSS"
+because I do not have much experience in programming and that CSS framework was making a lot of problems for me.
+
+Right now I am working on making a home page and a navigation bar that looks good but I am having problems to make some stuff work and it is obviously because I am bad in using
+JS. I will be researching about how to use JavaScript to toggle on/off classes or variables in CSS.
+
+//Sultan
+
+**Updated**: 2023-04-28
+
+<svelte:head>
+  <style>
+  </style>
+</svelte:head>
