@@ -33,6 +33,40 @@ JS. I will be researching about how to use JavaScript to toggle on/off classes o
 
 **Updated**: 2023-04-28
 
+**Updating...**
+
+Hi everybody, it has been a long time now and I have been thinking about what kind of website I am going to be doing as my school project. The decision was hard to make but I 
+have finally decided. I will give you guys a hint and let's see if you can guess it right, the hint is SBDL.
+
+The websites name is going to be Send Birthday Letters.
+
+How will it work?
+
+  **- I will add an input that will ask for a person's:**
+
+    -- *Name*
+
+    -- *age*
+
+    -- *a meaningful story to them*
+
+  **- Depending on the information above, I will add a list of different birthday letters to the website and the viewers will decide themselves which letter they want to choose.**
+
+  **- I will give the viewers some options:**
+
+    -- *A birthday letter for a family member*
+
+    -- *A birthday letter for a best friend*
+
+    -- *A birthday letter for a friend*
+
+    -- *A birthday letter for a somebody they know (Basically a more basic birthday letter)*
+
+  **- I will think about what to add next while trying to make the website.**
+
+  **Updated**: 2023-05-08
+    
+
 <svelte:head>
   <style>
   </style>

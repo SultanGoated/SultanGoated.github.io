@@ -1,250 +1,203 @@
 <script>
-  let active = false;
-  let HomeStyle = "", BlogStyle = "", TellTaleStyle = "", ToDoListStyle = "", SearchStyle = "", MemoryStyle = "", ElizaChatBotStyle = "", ClickerStyle = "", ApiStyle = "";
-  function onHomeClick() {
-    HomeStyle = "forceHover";
-    BlogStyle = "";
-    TellTaleStyle = "";
-    ToDoListStyle = "";
-    SearchStyle = "";
-    MemoryStyle = "";
-    ElizaChatBotStyle = "";
-    ClickerStyle = "";
-    ApiStyle = "";
-  }
-  function onBlogClick() {
-    HomeStyle = "";
-    BlogStyle = "forceHover";
-    TellTaleStyle = "";
-    ToDoListStyle = "";
-    SearchStyle = "";
-    MemoryStyle = "";
-    ElizaChatBotStyle = "";
-    ClickerStyle = "";
-    ApiStyle = "";
-  }
-  function onToDoListClick() {
-    HomeStyle = "";
-    BlogStyle = "";
-    TellTaleStyle = "";
-    ToDoListStyle = "forceHover";
-    SearchStyle = "";
-    MemoryStyle = "";
-    ElizaChatBotStyle = "";
-    ClickerStyle = "";
-    ApiStyle = "";
-  }
-  function onTellTaleClick() {
-    HomeStyle = "";
-    BlogStyle = "";
-    TellTaleStyle = "forceHover";
-    ToDoListStyle = "";
-    SearchStyle = "";
-    MemoryStyle = "";
-    ElizaChatBotStyle = "";
-    ClickerStyle = "";
-    ApiStyle = "";
-  }
-  function onSearchClick() {
-    HomeStyle = "";
-    BlogStyle = "";
-    TellTaleStyle = "";
-    ToDoListStyle = "";
-    SearchStyle = "forceHover";
-    MemoryStyle = "";
-    ElizaChatBotStyle = "";
-    ClickerStyle = "";
-    ApiStyle = "";
-  }
-  function onClickerClick() {
-    HomeStyle = "";
-    BlogStyle = "";
-    TellTaleStyle = "";
-    ToDoListStyle = "";
-    SearchStyle = "";
-    MemoryStyle = "";
-    ElizaChatBotStyle = "";
-    ClickerStyle = "forceHover";
-    ApiStyle = "";
-  }
-  function onMemoryClick() {
-    HomeStyle = "";
-    BlogStyle = "";
-    TellTaleStyle = "";
-    ToDoListStyle = "";
-    SearchStyle = "";
-    MemoryStyle = "forceHover";
-    ElizaChatBotStyle = "";
-    ClickerStyle = "";
-    ApiStyle = "";
-  }
-  function onElizaChatBotClick() {
-    HomeStyle = "";
-    BlogStyle = "";
-    TellTaleStyle = "";
-    ToDoListStyle = "";
-    SearchStyle = "";
-    MemoryStyle = "";
-    ElizaChatBotStyle = "forceHover";
-    ClickerStyle = "";
-    ApiStyle = "";
+  let toggled = false
+
+  let toggleMenu = () => {
+    toggled = !toggled
   }
 </script>
 
-<nav>
-  <div class="container">
-    <h1>Home</h1>
-    <div class="menu">
-      <a href="/" class={HomeStyle} on:click={onHomeClick}>Home</a>
-      <a href="/blog" class={BlogStyle} on:click={onBlogClick}>Blog</a>
-      <a href="/telltale" class={TellTaleStyle} on:click={onTellTaleClick}>TellTale</a>
-      <a href="/ElizaChatBot" class={ElizaChatBotStyle} on:click={onElizaChatBotClick}>Eliza Chat Bot</a>
-      <a href="/search" class={SearchStyle} on:click={onSearchClick}>Search</a>
-      <a href="/clicker" class={ClickerStyle} on:click={onClickerClick}>Clicker</a>
-      <a href="/memory" class={MemoryStyle} on:click={onMemoryClick}>Memory</a>
-      <a href="/todolist" class={ToDoListStyle} on:click={onToDoListClick}>To Do List</a>
-    </div>
 
-    <button class="hamburger" class:active={active} on:click={() => {active = !active;}}>
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+<header>
+  <a href="/" class="logo"><i class="ri-home-4-line"></i><span class="sultan"> Sultan </span><span class="hub">hub</span></a>
+
+  <ul class:open={toggled} class="navbar">
+    <li><a href="/" class="active">Home</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/SendBirthdayLetters">Send A Birthday Letter</a></li>
+    <li><a href="/ElizaChatBot">Chat Bot</a></li>
+    <li><a href="/telltale">Telltale</a></li>
+    <li><a href="/search">Search</a></li>
+    <li><a href="/memory">Memory</a></li>
+    <li><a href="/clicker">Clicker</a></li>
+    <li><a href="/todolist">To Do List</a></li>
+  </ul>
+
+  <div class="main">
+    <a href="" class="user"><i class="ri-user-3-fill"></i>Sign In</a>
+    <a href="">Register</a>
+    <div class:bx-x={toggled}  class="bx bx-menu" id="menu-icon" on:click={toggleMenu}  on:keypress={toggleMenu} ></div>
   </div>
-</nav>
+</header>
 
-<hr />
-<div class="scrollable">
-  <slot />
-</div>
+<slot></slot>
 
 <style>
-  :root {
-    --primary: #8c38ff;
-    --light: #EEEEEE;
-    --dark: #212121;
-  }
+*{
+  padding: 0;
+  margin: 0 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Fira sans", sans-serif;
-  }
+:root{
+  --bg-color: #222327;
+  --text-color: #fff;
+  --main-color: #29fd53;
+}
 
-  .scrollable{
-    overflow-y: auto;
-    height: 100%;
-  }
+.sultan{
+  background-color: black;
+  padding-right: 3px;
+  padding-left: 3px;
+}
 
-  .container {
-    max-width: 1280px;
-    margin: 0 auto;
+.hub{
+  background-color: orange;
+  padding-right: 3px;
+  padding-left: 3px;
+}
+
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: darkgrey;
+  height: 70px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #222327;
+  padding: 28px 40px;
+  transition: all 0.5s ease;
+  border: 3px outset var(--main-color);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.logo i{
+  color: var(--main-color);
+  font-size: 28px;
+  margin-right: 3px;
+}
+
+.logo span{
+  color: var(--text-color);
+  font-size: 1.7rem;
+  font-weight: 600;
+
+}
+
+.navbar{
+  display: flex;
+}
+
+.navbar a{
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 5px 0;
+  margin: 0 30px;
+  transition: all 0.5s ease;
+}
+
+.navbar a:hover{
+  color: var(--main-color);
+}
+
+.navbar a.active{
+  color: var(--main-color);
+}
+
+.main{
+  display: flex;
+  align-items: center;
+}
+
+.main a{
+  margin-right: 25px;
+  margin-left: 10px;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+
+.user{
+  display: flex;
+  align-items: center;
+}
+
+.user i{
+  color: var(--main-color);
+  font-size: 28px;
+  margin-right: 7px;
+}
+
+.main a:hover{
+  color: var(--main-color);
+}
+
+#menu-icon{
+  font-size: 35px;
+  color: var(--text-color);
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+
+@media (max-width: 1660px){
+  header{
+    padding: 14px 20px;
+    transition: 0.2s;
+  }
+  .navbar a{
+    padding: 5px 0;
+    margin: 0px 20px;
+  }
+}
+
+@media (max-width: 1500px){
+  #menu-icon{
+    display: block;
+  }
+  .navbar{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 270px;
+    height: fit-content;
+    background: var(--main-color);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+    transition: all 0.5s ease;
   }
-
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    background-color: var(--dark);
-    padding: 16px 32px;
-    border-bottom: 3px solid var(--primary);
-  }
-
-  h1 {
-    color: #fff;
-    font-size: 28px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-
-  .hamburger {
+  .navbar a{
     display: block;
-    position: relative;
-    z-index: 1;
-    user-select: none;
-    appearance: none;
-    border: none;
-    outline: none;
-    background: none;
-    cursor: pointer;
+    margin: 12px 0;
+    padding: 0px 25px;
+    transition: all 0.5s ease;
   }
-
-  .hamburger span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-    background-color: var(--light);
-    border-radius: 6px;
-    z-index: 1;
-    transform-origin: 0 0;
-    transition: 0.4s;
+  .navbar a:hover{
+    color: var(--text-color);
+    transform: translateY(5px);
   }
-
-  .hamburger:hover span:nth-child(2){
-    transform: translateX(10px);
-    background-color: var(--primary);
+  .navbar a.active{
+    color: var(--text-color);
   }
-
-  .hamburger.active span:nth-child(1) {
-    transform: translate(0px, -2px) rotate(45deg);
+  .navbar.open{
+    right: 2%;
   }
-
-  .hamburger.active span:nth-child(2) {
-    transform: translateX(10px);
-    opacity: 0;
-  }
-
-  .hamburger.active span:nth-child(3) {
-    transform: translate(-3px, 3px) rotate(-45deg);
-  }
-
-  .hamburger.active:hover span{
-    background-color: var(--primary);
-  }
-
-  .menu {
-    display: none;
-    flex: 1 1 0%;
-    justify-content: flex-end;
-    margin: 0 -16px;
-  }
-
-  .menu a {
-    color: #FFF;
-    margin: 0 16px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.4s;
-    padding: 8px 16px;
-    border-radius: 99px;
-  }
-
-  .menu a.active, .menu a:hover {
-    background-color: var(--primary);
-  }
-  .forceHover {
-    background-color: var(--primary) !important;
-  }
-
-  /* Update media query */
-  @media (min-width: 1136px) {
-    .hamburger{
-      display: none;
-    }
-
-    .menu{
-      display: flex;
-      /* Change justify-content to flex-end */
-      justify-content: flex-end;
-    }
-  }
+}
 </style>
+

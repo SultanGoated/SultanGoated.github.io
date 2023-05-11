@@ -1,3 +1,5 @@
+<title>Home</title>
+
 <header>
 	<h1 class="welcome">Welcome To My website</h1>
 </header>

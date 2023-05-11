@@ -4,6 +4,8 @@
   export let data;
 </script>
 
+<title>{data.title}</title>
+<a class="back" href="/blog">Back</a>
 <main>
   <article>
     <h1>{data.title}</h1>
@@ -11,27 +13,30 @@
     <svelte:component this={data.content} />
   </article>
 </main>
-<a class="back" href="/blog">Back</a>
+
 
 <style>
-  
   article{
     background-color: white;
-    margin: 4rem 17rem;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    margin-left: 150px;
+    margin-right: 150px;
     padding: 2rem 7rem;
     border-radius: 50px;
     font-family: sans-serif;
     max-height: 600px;
     overflow-y: auto;
     overflow-x: auto;
-    text-align: center;
+    text-align: left;
     border: 2px dotted red;
   }
 
   .back{
     color: white;
     font-family: sans-serif;
-    size: 28px;
+    font-size: 28px;
+    padding: 47vw;
   }
 
   </style>
