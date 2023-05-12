@@ -136,7 +136,6 @@
 <svelte:head>
 	<style>
 		body{
-			background-image: url("BalloonGif.gif");
 			background-color: cyan;
 		}
 		
