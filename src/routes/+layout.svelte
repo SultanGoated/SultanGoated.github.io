@@ -8,7 +8,7 @@
 
 
 <header>
-  <a href="/" class="logo"><i class="ri-home-4-line"></i><span class="sultan"> Sultan </span><span class="hub">hub</span></a>
+  <a href="/" class="logo"><i class="ri-home-4-line"></i><h1 class="dev"> Dev</h1><h1 class="sultan">Sultan</h1></a>
 
   <ul class:open={toggled} class="navbar">
     <li><a href="/" class="active">Home</a></li>
@@ -47,16 +47,15 @@
   --main-color: #29fd53;
 }
 
-.sultan{
-  background-color: black;
+.dev{
+  color: var(--main-color);
   padding-right: 3px;
   padding-left: 3px;
 }
 
-.hub{
-  background-color: orange;
+.sultan{
+  color: white;
   padding-right: 3px;
-  padding-left: 3px;
 }
 
 header{

@@ -2,12 +2,11 @@
 	JS
 -->
 <script>
-    import { bubble } from "svelte/internal";
     import Letter from "./Letter.svelte";
 
 	//Variables
 
-
+	let activity = true;
 	let personName = "", age = "", story = "", name = "";
 
 	//List of name, age and story
@@ -33,7 +32,11 @@
 		notes=notes;
 		console.log(notes)
 	
-		name = "", age = "", story = "", friendName = "";
+		name = "", age = "", story = "", personName = "";
+	}
+
+	function toggleActivity(){
+		activity = !activity;
 	}
 </script>
 
@@ -51,13 +54,14 @@
 				<Letter {note}></Letter>
 			</div>
 		</div>
+		<button on:click={toggleActivity} class="new_letter">Delete and rewrite</button>
 	{/each}
 
 	<div>
 		<!--
 			I like using fieldsets because I feel they are easier to use for filling up forms or inputs.
 		-->
-		<fieldset>
+		<fieldset class:active={activity} class:inactive={!activity}>
 			<div class="input">
 				<!--
 					Input for taking in name, age and a meaningful story
@@ -70,14 +74,21 @@
 			<!--
 				Button for confirming changes to Birthday letters
 			-->
-			<button on:click={form} class="confirming">Confirm</button>
+			<button on:click={form} on:click={toggleActivity} class='confirming'>Confirm</button>
 		</fieldset>
+	</div>
+	<div class="balloon-container">
+		<img class="balloon" src="BalloonGif.gif" alt="Balloon 1">
+		<img class="balloon" src="BalloonGif.gif" alt="Balloon 2">
 	</div>
 </div>
 <!--
 	Styling
 -->
 <style>
+	*{
+		font-family: 'Times New Roman', Times, serif;
+	}
 	.main{
 		display: flex;
 		flex-direction: column;
@@ -119,6 +130,10 @@
 	}
 	.letterContainer{
 		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		place-content: center;
+		align-items: center;
 		border: outset blue 3px;
 		border-radius: 20px;
 		background-color: #89CFF0;
@@ -127,11 +142,43 @@
 	}
 	.letterStyle{
 		max-width: 700px;
-		padding: 50px 50px 100px 100px;
-		height: 77.6vh;
-		max-height: 77.6vh;
+		padding-top: 50px;
+		padding-left: 100px;
+		padding-right: 100px;
+		padding-bottom: 0;
+		height: 77vh;
+		max-height: 77vh;
 		overflow: auto;
 	}
+	.active{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: fit-content;
+		width: fit-content;
+		max-height: 700px;
+		max-width: 700px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		margin-top: 10px;
+		background-color: #89CFF0;
+		border: outset blue 3px;
+		border-radius: 15px;
+	}
+	.inactive{
+		display: none;
+	}
+	.new_letter{
+		font-size: 1.5rem;
+		width: 200px;
+		height: 50px;
+		margin: 10px 10px;
+		background-color: red;
+		border-radius: 15px;
+		color: mistyrose;
+	}
+
 </style>
 <svelte:head>
 	<style>
