@@ -16,15 +16,19 @@
 	function form(){
 		if (personName == ""){
             alert("Please type a friend's Name")
+			activity = true;
 			return;
         }else if (age == ""){
 			alert("Please type friend's Age")
+			activity = true;
 			return;
 		}else if (story == ""){
 			alert("Please type a Meaningful Background Story")
+			activity = true;
 			return;
 		}else if (name == ""){
 			alert("Please type your Name")
+			activity = true;
 			return;
 		}
 
@@ -193,7 +197,8 @@
 <svelte:head>
 	<style>
 		body{
-			background-color: cyan;
+			background-image: url('bday_background.gif');
+			background-size: 210vh;
 		}
 		
 	</style>
