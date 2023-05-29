@@ -2,7 +2,7 @@
 	JS
 -->
 <script>
-    import Letter from "./Letter.svelte";
+    import Letter from "./Letter.svx";
 
 	//Variables
 
@@ -28,17 +28,19 @@
 			return;
 		}
 
-		notes.push({personName:personName,name:name,age:age,story:story})
+		notes.push({ id: Date.now(), personName: personName, name: name, age: age, story: story });
 		notes=notes;
 		console.log(notes)
 	
 		name = "", age = "", story = "", personName = "";
 	}
 
-	function toggleActivity(){
+	function toggleActivity(event) {
+		const noteId = event.detail.noteId;
+		notes = notes.filter(note => note.id !== noteId);
 		activity = !activity;
 	}
-</script>
+</script> 
 
 <!--
 	Setting up title
@@ -48,13 +50,16 @@
 	Main <div>
 -->
 <div class="main">
+	<!--
+		After the user has used the input fieldset, the page will show the letter and the info that has been given for the letter.
+	-->
 	{#each notes as note}
 		<div class="letterContainer">
 			<div class="letterStyle">
 				<Letter {note}></Letter>
 			</div>
 		</div>
-		<button on:click={toggleActivity} class="new_letter">Delete and rewrite</button>
+		<button on:click={() => toggleActivity({ detail: { noteId: note.id } })} class="new_letter">Delete and rewrite</button>
 	{/each}
 
 	<div>
@@ -116,6 +121,8 @@
 	.confirming{
 		height: 50px;
 		width: 100px;
+		border-radius: 10px;
+		border-color: blue;
 	}
 	.input{
 		display: flex;
@@ -127,6 +134,8 @@
 		height: 30px;
 		font-size: 20px;
 		width: 500px;
+		border-radius: 10px;
+		border-color: blue;
 	}
 	.letterContainer{
 		display: flex;
@@ -165,6 +174,7 @@
 		background-color: #89CFF0;
 		border: outset blue 3px;
 		border-radius: 15px;
+		margin-top: 10rem;
 	}
 	.inactive{
 		display: none;
