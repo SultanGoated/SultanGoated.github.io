@@ -84,11 +84,11 @@
 				Button for confirming changes to Birthday letters
 			-->
 			<button on:click={form} on:click={toggleActivity} class='confirming'>Confirm</button>
+			<div class="balloon-container">
+				<img class="balloon" src="BalloonGif.gif" alt="Balloon 1">
+				<img class="balloon" src="BalloonGif.gif" alt="Balloon 2">
+			</div>
 		</fieldset>
-	</div>
-	<div class="balloon-container">
-		<img class="balloon" src="BalloonGif.gif" alt="Balloon 1">
-		<img class="balloon" src="BalloonGif.gif" alt="Balloon 2">
 	</div>
 </div>
 <!--
@@ -121,6 +121,7 @@
 		background-color: #89CFF0;
 		border: outset blue 3px;
 		border-radius: 15px;
+		gap: 20px;
 	}
 	.confirming{
 		height: 50px;
@@ -151,7 +152,7 @@
 		border-radius: 20px;
 		background-color: #89CFF0;
 		justify-content: center;
-		margin-top: 0;
+		margin-top: 10px;
 	}
 	.letterStyle{
 		max-width: 700px;

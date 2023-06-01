@@ -65,6 +65,34 @@ How will it work?
   **- I will think about what to add next while trying to make the website.**
 
   **Updated**: 2023-05-08
+
+  **Hello again!**
+
+  It has been a really long time now since I updated you guys last but the thing is that I have been really sick and that is the reason
+  that I have not been working on my page.
+
+  **Updated**: 2023-05-14
+
+  **Hi guys!**
+
+  I am back with good news this time, and yes I do feel better now. I have not had enough time to complete all the To-Do list I had settled up for my self
+  but the good news is that since the time is up for us I am done with this project and it is ready to be used. The only problem is that I don't know
+  how to save all the data that I get from my Website viewers which means that if you refresh the page, every progress is gone. I will learn those skills
+  for future because right now I am working on another project which is not a school project, it is a project for my best friend and I want to
+  surprise only and only her with the project. It means that page will be private and since I can not save progresses, I will just build the whole website
+  and send it to her after I am done.
+
+  Now let us get to back to documenting on this project. Well, first of all when we enter my page, I have got a fieldset with some input where it
+  is asking for person's name, person's age, a meaningful background story and the viewers name. I used a bit of JavaScript to make it happen. After that I
+  have styled the page so that when I wrote every required information in the input boxes, the fieldset's display changes to none and shows a div where it shows the generated
+  letter with the information to the viewer.
+
+  Well ofcourse if they give wrong information they will be able to delete that letter and generate a new one.
+
+  You can test the project by going into my github:
+  sultangoated.github.io/SendBirthdayLetters
+
+  **Updated**: 2023-05-31
     
 
 <svelte:head>
