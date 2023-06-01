@@ -50,7 +50,7 @@
     "src": ".svelte-kit/generated/nodes/13.js"
   },
   ".svelte-kit/generated/nodes/14.js": {
-    "file": "_app/immutable/chunks/14-274f5f35.js",
+    "file": "_app/immutable/chunks/14-fca3bc85.js",
     "imports": [
       "src/routes/sooriSpecial/+page.svelte"
     ],
@@ -114,7 +114,7 @@
     "src": ".svelte-kit/generated/nodes/6.js"
   },
   ".svelte-kit/generated/nodes/7.js": {
-    "file": "_app/immutable/chunks/7-5145d0e8.js",
+    "file": "_app/immutable/chunks/7-8ea02a5d.js",
     "imports": [
       "src/routes/SendBirthdayLetters/+page.svelte"
     ],
@@ -131,9 +131,9 @@
     "src": ".svelte-kit/generated/nodes/8.js"
   },
   ".svelte-kit/generated/nodes/9.js": {
-    "file": "_app/immutable/chunks/9-213d220d.js",
+    "file": "_app/immutable/chunks/9-43d8a58c.js",
     "imports": [
-      "__page-abc098ce.js",
+      "__page-b6b0e2a5.js",
       "src/routes/blog/[path]/+page.svelte"
     ],
     "isDynamicEntry": true,
@@ -145,12 +145,12 @@
   "__page-80848ead.js": {
     "file": "_app/immutable/chunks/_page-80848ead.js"
   },
-  "__page-abc098ce.js": {
+  "__page-b6b0e2a5.js": {
     "dynamicImports": [
       "src/lib/posts/aboutMe.svx",
       "src/lib/posts/projectDocumentation.svx"
     ],
-    "file": "_app/immutable/chunks/_page-abc098ce.js",
+    "file": "_app/immutable/chunks/_page-b6b0e2a5.js",
     "imports": [
       "_preload-helper-41c905a7.js"
     ]
@@ -205,7 +205,7 @@
       ".svelte-kit/generated/nodes/15.js",
       ".svelte-kit/generated/nodes/16.js"
     ],
-    "file": "_app/immutable/start-debd726b.js",
+    "file": "_app/immutable/start-35bc56db.js",
     "imports": [
       "_index-4c969e6b.js",
       "_singletons-ba114d08.js",
@@ -234,7 +234,7 @@
     "src": "src/lib/posts/aboutMe.svx"
   },
   "src/lib/posts/projectDocumentation.svx": {
-    "file": "_app/immutable/chunks/projectDocumentation-4f63a6d8.js",
+    "file": "_app/immutable/chunks/projectDocumentation-98037106.js",
     "imports": [
       "_index-4c969e6b.js"
     ],
@@ -297,14 +297,14 @@
     "src": "src/routes/ElizaChatBot/+page.svelte"
   },
   "src/routes/SendBirthdayLetters/+page.css": {
-    "file": "_app/immutable/assets/_page-cf735c48.css",
+    "file": "_app/immutable/assets/_page-bb956344.css",
     "src": "src/routes/SendBirthdayLetters/+page.css"
   },
   "src/routes/SendBirthdayLetters/+page.svelte": {
     "css": [
-      "_app/immutable/assets/_page-cf735c48.css"
+      "_app/immutable/assets/_page-bb956344.css"
     ],
-    "file": "_app/immutable/components/pages/SendBirthdayLetters/_page.svelte-9d5d2325.js",
+    "file": "_app/immutable/components/pages/SendBirthdayLetters/_page.svelte-9a65d1bb.js",
     "imports": [
       "_index-4c969e6b.js"
     ],
@@ -354,10 +354,10 @@
     "src": "src/routes/blog/[path]/+page.css"
   },
   "src/routes/blog/[path]/+page.js": {
-    "file": "_app/immutable/modules/pages/blog/_path_/_page.js-c3c44aaf.js",
+    "file": "_app/immutable/modules/pages/blog/_path_/_page.js-17ca85c1.js",
     "imports": [
       "_preload-helper-41c905a7.js",
-      "__page-abc098ce.js"
+      "__page-b6b0e2a5.js"
     ],
     "isEntry": true,
     "src": "src/routes/blog/[path]/+page.js"
@@ -444,8 +444,15 @@
     "isEntry": true,
     "src": "src/routes/search/[category]/+page.svelte"
   },
+  "src/routes/sooriSpecial/+page.css": {
+    "file": "_app/immutable/assets/_page-18b2a46c.css",
+    "src": "src/routes/sooriSpecial/+page.css"
+  },
   "src/routes/sooriSpecial/+page.svelte": {
-    "file": "_app/immutable/components/pages/sooriSpecial/_page.svelte-2a51a58c.js",
+    "css": [
+      "_app/immutable/assets/_page-18b2a46c.css"
+    ],
+    "file": "_app/immutable/components/pages/sooriSpecial/_page.svelte-563ef052.js",
     "imports": [
       "_index-4c969e6b.js"
     ],
