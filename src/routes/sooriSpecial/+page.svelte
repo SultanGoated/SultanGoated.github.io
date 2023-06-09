@@ -1,8 +1,9 @@
 <script>
     import Letter from "./letter.svx";
+    
 </script>
 
-<embed src="onlymp3.to - Ali Molaei - Tavalod OFFICIAL AUDIO  علی مولایی - تولد-5MrEqxxHksc-256k-1654113275568.mp3" type="audio/mpeg" autostart="true" hidden="true" loop="true">
+<embed src="onlymp3.to - Ali Molaei - Tavalod OFFICIAL AUDIO  علی مولایی - تولد-5MrEqxxHksc-256k-1654113275568.mp3"  autostart="true" hidden="true" loop="true">
 <div class="card">
     <img src="https://cdn.pixabay.com/photo/2020/10/06/21/54/cake-5633461__480.png" alt="birthday" class="birthday">
     <div class="text">
