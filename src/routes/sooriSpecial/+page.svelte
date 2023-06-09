@@ -2,7 +2,7 @@
     import Letter from "./letter.svx";
 </script>
 
-<embed src="onlymp3.to - Ali Molaei - Tavalod OFFICIAL AUDIO  علی مولایی - تولد-5MrEqxxHksc-256k-1654113275568.mp3" autostart="true" hidden="true" loop="true">
+<embed src="onlymp3.to - Ali Molaei - Tavalod OFFICIAL AUDIO  علی مولایی - تولد-5MrEqxxHksc-256k-1654113275568.mp3" type="audio/mpeg" autostart="true" hidden="true" loop="true">
 <div class="card">
     <img src="https://cdn.pixabay.com/photo/2020/10/06/21/54/cake-5633461__480.png" alt="birthday" class="birthday">
     <div class="text">
@@ -98,6 +98,31 @@ img.birthday {
 
 .text {
     padding: 1em;
+}
+.text h1{
+    font-family:cursive;
+    font-size: 40px;
+}
+.space {
+    height: 400px;
+}
+
+@media only screen and (max-width: 400px){
+    .card {
+        height: 15vh;
+        padding-top: 340px;
+        width: 280px;
+        max-width: 350px;
+    }
+}
+
+img.birthday {
+
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.text {
+    padding: 0.6em;
 }
 .text h1{
     font-family:cursive;
