@@ -20,6 +20,7 @@
     <li><a href="/memory">Memory</a></li>
     <li><a href="/clicker">Clicker</a></li>
     <li><a href="/todolist">To Do List</a></li>
+    <li><a href="/sooriSpecial">Soori only</a></li>
   </ul>
 
   <div class="main">
