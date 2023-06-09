@@ -198,5 +198,60 @@ header{
     right: 2%;
   }
 }
+
+@media (max-width: 500px){
+  #menu-icon{
+    display: block;
+  }
+
+
+
+  header{
+    width: 100%;
+    height: 60px;
+  }
+
+  .logo i, .logo h1{
+    font-size: 20px;
+  }
+
+  .main a{
+    font-size: 0.7rem;
+  }
+
+  .main a i{
+    font-size: 0.9rem;
+  }
+
+  .navbar{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 270px;
+    height: fit-content;
+    background: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+  }
+  .navbar a{
+    display: block;
+    margin: 8px 0;
+    padding: 0px 25px;
+    transition: all 0.5s ease;
+  }
+  .navbar a:hover{
+    color: var(--text-color);
+    transform: translateY(5px);
+  }
+  .navbar a.active{
+    color: var(--text-color);
+  }
+  .navbar.open{
+    right: 1%;
+  }
+}
 </style>
 

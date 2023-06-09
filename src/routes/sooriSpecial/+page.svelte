@@ -50,7 +50,6 @@
 @media only screen and (min-width: 1000px) {
     .card {
         flex-direction: row-reverse;
-
         }
     .card img.birthday {
         width: 60%;
@@ -70,7 +69,7 @@
     }
 
     .text{
-        padding: 0em§;
+        padding: 0em;
     }
 
     .card img.birthday {
@@ -83,13 +82,22 @@
     }
 }
 
+@media only screen and (max-width: 500px){
+    .card {
+        height: 40vh;
+        padding-top: 340px;
+        width: 350px;
+        max-width: 350px;
+    }
+}
+
 img.birthday {
-    max-height: 40vh;
+
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .text {
-    padding: 3em;
+    padding: 1em;
 }
 .text h1{
     font-family:cursive;
@@ -99,3 +107,4 @@ img.birthday {
     height: 400px;
 }
 </style>
+
