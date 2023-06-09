@@ -1,13 +1,13 @@
 <script>
-
+    import Letter from "./letter.svx";
 </script>
 
-
+<embed src="onlymp3.to - Ali Molaei - Tavalod OFFICIAL AUDIO  علی مولایی - تولد-5MrEqxxHksc-256k-1654113275568.mp3" autostart="true" hidden="true" loop="true">
 <div class="card">
     <img src="https://cdn.pixabay.com/photo/2020/10/06/21/54/cake-5633461__480.png" alt="birthday" class="birthday">
     <div class="text">
       <h1>Happy Birthday!</h1>
-      <p>Dear Soori, I want to start this letter by wishing you the happiest birthday of your life and I hope reach every goal you set for yourself</p>
+      <p><Letter></Letter></p>
       <p></p>
     </div>
     <div class="space"></div>
@@ -25,12 +25,12 @@
     background: linear-gradient(to right, #45B649, #DCE35B); 
     display: grid;
     place-items: center;
-    height: calc(100vh - 80px);
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
 
 .card {
+
     background: #12192c;
     border-radius: 30px;
     height: 85vh;
@@ -42,30 +42,44 @@
     justify-content: center;
     align-items: center;
     padding: 1em;
-    overflow: hidden;
     color:#DCE35B;
+    overflow-y: auto;
+    
 }
 
 @media only screen and (min-width: 1000px) {
     .card {
         flex-direction: row-reverse;
-    }
+
+        }
     .card img.birthday {
         width: 60%;
         max-width: 50vw;
-        max-height: unset;
+        max-height: 60vh;
         border-radius: 30px;
+        object-fit: cover;
+
     }
 }
 
-@media only screen and (max-height: 640px) {
+@media only screen and (max-width: 640px) {
     .card {
-        flex-direction: row-reverse;
+        height: 50vh;
+        padding-top: 300px;
+        
     }
+
+    .text{
+        padding: 0em§;
+    }
+
     .card img.birthday {
+        
         width: 100%;
         max-width: 50vw;
-        max-height: unset;
+        max-height: 40vh;
+        border-radius: 20px;
+        object-fit: cover;
     }
 }
 
@@ -82,6 +96,6 @@ img.birthday {
     font-size: 40px;
 }
 .space {
-    height: 100px;
+    height: 400px;
 }
 </style>
